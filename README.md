@@ -1,7 +1,7 @@
 # MASSGRAVE UPDATER
 A simple update bash script for MASSGRAVE
 
-* Replace the $path variable with your webserver MASGrave folder path.
+* Replace the $path variable with your webserver MASSGrave folder path.
 
 * Add crontab rule
 
