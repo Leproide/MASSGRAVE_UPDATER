@@ -12,13 +12,13 @@ if cmp -s $path/MAS_AIO.cmd $path/MAS_AIO.cmd_update
 then echo "Files are the same"
 rm $path/MAS_AIO.cmd_update
 echo No update available $(date) >> $path/update.log
-exit 1
+exit 0
 else echo "Files are different"
 rm $path/MAS_AIO.cmd.bak
 mv $path/MAS_AIO.cmd $path/MAS_AIO.cmd.bak
 mv $path/MAS_AIO.cmd_update $path/MAS_AIO.cmd
 echo Updated $(date) >> $path/update.log
-exit 1
+exit 0
 fi
 else
     echo "Something went wrong"
