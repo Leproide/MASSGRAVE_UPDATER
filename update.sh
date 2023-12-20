@@ -11,17 +11,17 @@ if [ $wget_result = 200 ]; then
 if cmp -s $path/MAS_AIO.cmd $path/MAS_AIO.cmd_update
 then echo "Files are the same"
 rm $path/MAS_AIO.cmd_update
-echo No update available $date >> $path/update.log
+echo No update available $(date) >> $path/update.log
 exit 1
 else echo "Files are different"
 rm $path/MAS_AIO.cmd.bak
 mv $path/MAS_AIO.cmd $path/MAS_AIO.cmd.bak
 mv $path/MAS_AIO.cmd_update $path/MAS_AIO.cmd
-echo Updated $date >> $path/update.log
+echo Updated $(date) >> $path/update.log
 exit 1
 fi
 else
     echo "Something went wrong"
-        echo DOWNLOAD ERROR - $wget_result - $date >> $path/update.log
+        echo DOWNLOAD ERROR - $wget_result - $(date) >> $path/update.log
         exit 1
 fi
