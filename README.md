@@ -10,5 +10,6 @@ Enjoy your autoupdate MASSGrave activator mirror
 -----------------------------------------------------------------------
 
 Crontab
-
+'''
 0 0 * * */2 /usr/bin/sh /yourwebserverpath/update.sh
+'''
