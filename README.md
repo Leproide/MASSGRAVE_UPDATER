@@ -1,6 +1,5 @@
 # MASSGRAVE UPDATER
 A simple update bash script for MASSGRAVE
-https://massgrave.dev
 
 * Replace the $path variable with your webserver MASSGrave folder path.
 
