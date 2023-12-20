@@ -1,9 +1,9 @@
 # MASSGRAVE UPDATER
 A simple update bash script for MASSGRAVE
 
-Replace the $path variable with your webserver MASGrave folder path.
+* Replace the $path variable with your webserver MASGrave folder path.
 
-Add crontab rule
+* Add crontab rule
 
 Enjoy your autoupdate MASSGrave activator mirror
 
