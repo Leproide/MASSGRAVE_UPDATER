@@ -5,14 +5,4 @@ A simple update bash script for MASSGRAVE
 
 * Add crontab rule
 
-Enjoy your autoupdate (2day) MASSGrave activator mirror
-
------------------------------------------------------------------------
-
-Crontab
-
-```bash
-
-0 0 * * */2 /usr/bin/sh /yourwebserverpath/update.sh
-
-
+Enjoy your MASSGrave activator mirror
