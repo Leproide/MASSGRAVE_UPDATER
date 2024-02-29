@@ -5,14 +5,15 @@
 
 path="/var/www/html/changeme"
 
-# URL dello script PowerShell
+# MASSGRAVE GET SCRIPT URL
 ScriptURL='https://massgrave.dev/get.ps1'
 
-# Scarica lo script PowerShell e cerca la variabile $DownloadURL
+# SET $DownloadURL WITH MASSGRAVE WEBSITE PS1 VARIABLE
 DownloadURL=$(curl -s "$ScriptURL" | grep -oP '\$DownloadURL = \x27\K[^\x27]+')
 
-# Controlla se l'estrazione è riuscita
+# CHECK IF VARIABLE IS CORRECTLY POPULATED
 if [ -n "$DownloadURL" ]; then
+# UPDATING THE LOCAL SCRIPT
     wget_result="$(wget -NS "$DownloadURL" -P "$path" -O MAS_AIO.cmd_update 2>&1 | grep "HTTP/" | awk '{print $2}')"
 
     if [ $wget_result = 200 ]; then
@@ -35,6 +36,6 @@ if [ -n "$DownloadURL" ]; then
         exit 1
     fi
 else
-    echo "Impossibile recuperare URL download" >> "$path/update.log"
+    echo "Cant fetch download url from remote script" >> "$path/update.log"
     exit 1
 fi
