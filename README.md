@@ -1,4 +1,4 @@
-# MASSGRAVE UPDATER
+# MASSGRAVE MIRROR UPDATER
 A simple update bash script for MASSGRAVE
 
 * Replace the $path variable with your webserver MASSGrave folder path.
