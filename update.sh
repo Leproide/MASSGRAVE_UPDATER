@@ -11,12 +11,12 @@ ScriptURL='https://get.activated.win/get.ps1'
 # CHECK IF SCRIPT URL IS ACCESSIBLE
 if curl --output /dev/null --silent --head --fail "$ScriptURL"; then
     # Fetching download URLs from the new script
-    DownloadURLs=$(curl -s "$ScriptURL" | grep -oP '\$DownloadURL[1-3] = \x27\K[^\x27]+')
+    DownloadURLs=$(curl -s "$ScriptURL" | grep -oP "(?<=')[^']+(?=')" | grep 'MAS_AIO.cmd')
 
     # Check if we successfully fetched the URLs
     if [ -n "$DownloadURLs" ]; then
         # Convert DownloadURLs to array manually
-        urls=$(echo $DownloadURLs | tr ' ' '\n')  # Use newline as delimiter
+        urls=$(echo "$DownloadURLs" | tr ' ' '\n')  # Use newline as delimiter
 
         # Loop through URLs to attempt download
         for url in $urls; do
