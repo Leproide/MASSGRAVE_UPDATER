@@ -6,7 +6,7 @@
 path="/var/www/html/changeme"
 
 # MASSGRAVE GET SCRIPT URL
-ScriptURL='https://get.activated.win/get.ps1'
+ScriptURL='https://get.activated.win'
 
 # CHECK IF SCRIPT URL IS ACCESSIBLE
 if curl --output /dev/null --silent --head --fail "$ScriptURL"; then
